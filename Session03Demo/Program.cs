@@ -154,18 +154,18 @@ namespace Session03Demo
 
 			//// Formatted ToString
 
-			//int num1 = 12345;
+			int num1 = 12345;
 			//double num2 = 1234.5678;
 
-			//Console.WriteLine($"{num1.ToString("N")}"); // Number with commas
-			//Console.WriteLine($"{num1:C}"); // Currency
-			//Console.WriteLine($"{num1:X}");// Hexadecimal
-			//Console.WriteLine($"{num1:D10}");// Padded digits
-			//Console.WriteLine($"{num2:F2}"); // 2 decimal places
-			//Console.WriteLine($"{dateValue:d}"); // Short date
-			//Console.WriteLine($"{dateValue:D}"); // Long date
-			//Console.WriteLine($"{dateValue:t}"); // Short time
-			//Console.WriteLine($"{dateValue:yyyy-MM-dd}"); // Custom date format
+			Console.WriteLine(num1.ToString("N")); // Number with commas
+														Console.WriteLine($"{num1:C}"); // Currency
+														//Console.WriteLine($"{num1:X}");// Hexadecimal
+														//Console.WriteLine($"{num1:D10}");// Padded digits
+														//Console.WriteLine($"{num2:F2}"); // 2 decimal places
+														//Console.WriteLine($"{dateValue:d}"); // Short date
+														//Console.WriteLine($"{dateValue:D}"); // Long date
+														//Console.WriteLine($"{dateValue:t}"); // Short time
+														//Console.WriteLine($"{dateValue:yyyy-MM-dd}"); // Custom date format
 
 			//// Custom object ToString
 			//Person person = new Person { Id = 1, Name = "Mohamed" };
@@ -380,122 +380,6 @@ namespace Session03Demo
 			//name02 = name!; // No Warning
 
 
-			#endregion
-
-			#region string 
-
-			//// String declaration
-
-			//string str1 = "Hello World";           // Literal
-			//string str2 = new string('*', 5);  // Constructor
-			//string str3 = string.Empty;            // Empty string
-			//string str4 = "";                      // Also empty
-
-			//// String concatenation
-			//string first = "Hello";
-			//string second = "World";
-
-			//string concat1 = first + " " + second;           // + operator
-			//string concat2 = string.Concat(first, " ", second); // Concat method
-			//string concat3 = $"{first} {second}";            // String interpolation
-			//string concat4 = string.Format("{0} {1}", first, second); // Format
-
-			//// Verbatim strings
-			//string path = @"C:\Users\Documents\file.txt";
-			//path = "C:\\Users\\Documents\\file.txt";
-
-
-			#endregion
-
-			#region String Immutability
-			#region Example 01
-			//string original = "Hello";
-			//string modified = original.ToUpper();
-			//Console.WriteLine(original);
-			//Console.WriteLine($"Original hash code = {original.GetHashCode()}");
-			//Console.WriteLine(modified);
-			//Console.WriteLine($"Modified hash code = {modified.GetHashCode()}");
-
-			//// String interning
-			//string s1 = "Hello";
-			//string s2 = "Hello";
-			//string s3 = new string("Hello".ToCharArray());
-			//Console.WriteLine($"s1 hash code  = {s1.GetHashCode()}");
-			//Console.WriteLine($"s2 hash code  = {s2.GetHashCode()}");
-			//Console.WriteLine($"s3 hash code  = {s3.GetHashCode()}");
-
-			//Console.WriteLine($"ReferenceEquals(s1, s2) :   {Object.ReferenceEquals(s1, s2)} "); // (same interned object)
-			//Console.WriteLine($"s1.Equals(s2) {s1.Equals(s2)}");
-			//Console.WriteLine($"ReferenceEquals(s2, s3) :   {Object.ReferenceEquals(s2, s3)} "); // (different objects)
-			//Console.WriteLine($"s2.Equals(s3) {s2.Equals(s3)}");
-			//Console.WriteLine($"ReferenceEquals(s1, s3) {Object.ReferenceEquals(s1, s3)} "); // (different objects)
-			//Console.WriteLine($"s1.Equals(s3) {s1.Equals(s3)}");
-
-
-
-			#endregion
-
-			#region Example 02 
-
-			//string name01 = "Omar"; // same Object 
-			//string name02 = name01; // same Object 
-			//Console.WriteLine($"name01 = {name01}"); // Omar
-			//Console.WriteLine($"name02 = {name02}"); // Omar
-			//name02 = "Ali"; // new Object
-			//Console.WriteLine("After Change");
-			//Console.WriteLine($"name01 = {name01}"); // Omar
-			//Console.WriteLine($"name02 = {name02}"); // Ali
-
-			#endregion
-
-			#endregion
-
-			#region StringBuilder in C#
-
-			#region Example 01
-			//StringBuilder sb = new StringBuilder();
-			//sb.Append("Hello");
-			//sb.Append(' ');
-			//sb.Append("World");
-			//string result = sb.ToString();
-			//Console.WriteLine(result); // Output: Hello World
-
-			#endregion
-
-			#region Example 02
-			//// String concatenation
-			//var watch1 = System.Diagnostics.Stopwatch.StartNew();
-			//string strResult = "";
-			//for (int i = 0; i < 10000; i++)
-			//	strResult += "a";
-			//watch1.Stop();
-
-			//// StringBuilder
-			//var watch2 = System.Diagnostics.Stopwatch.StartNew();
-			//StringBuilder sbResult = new StringBuilder();
-			//for (int i = 0; i < 10000; i++)
-			//	sbResult.Append("a");
-			//string sbFinal = sbResult.ToString();
-			//watch2.Stop();
-
-			//Console.WriteLine($"10,000 concatenations:");
-			//Console.WriteLine($"  String (+)      : {watch1.ElapsedMilliseconds}ms");
-			//Console.WriteLine($"  StringBuilder   : {watch2.ElapsedMilliseconds}ms");
-
-			#endregion
-
-			#region Example 03 
-
-			//StringBuilder name01 = new StringBuilder("Mohamed");
-			//StringBuilder name02 = name01;
-			//Console.WriteLine($"name01 = {name01}"); // Mohamed
-			//Console.WriteLine($"name02 = {name02}"); // Mohamed
-			//name02.Append(" Ali");
-			//Console.WriteLine("After Change");
-			//Console.WriteLine($"name01 = {name01}"); // Mohamed Ali
-			//Console.WriteLine($"name02 = {name02}"); // Mohamed Ali
-
-			#endregion
 			#endregion
 		}
 
